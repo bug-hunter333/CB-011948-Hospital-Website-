@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="medi.css">
+
+    <title>Medicine Order Page</title>
+
+    <nav>
+        <div class="nav__logo">Hope Haven Hospital</div>
+        <ul class="nav__links">
+            <li class="link"><a href="./index.html">Home</a></li>
+            <li class="link"><a href="./About.html">About Us</a></li>
+            <li class="link"><a href="./services.html">Services</a></li>
+            <li class="link"><a href="./doctors.html">Doctors</a></li>
+            <li class="link"><a href="./consultingForm.html">Consulting Reservation</a></li>
+            <li class="link"><a href="./pharmacy.html">Pharmacy</a></li>
+        </ul>
+    </nav>
+    </ul>
+
+</head>
+<br>
+
+<body>
+
+    <div class="container">
+        <div class="header">Medicine Order Page</div>
+
+        <!-- Analgesics Section -->
+        <div class="section">
+            <h3>Analgesics</h3>
+            <div class="medicine-list">
+                <div class="medicine-item">
+                    <div>
+                        <b>Amount:</b> <input type="number" max="6" min="1" value="1">
+                        <button onclick="addToCart('Analgesics-medicine', this.previousElementSibling.value, 10)">Add to
+                            Cart</button>
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+
+        
+        <div class="section">
+            <h3>Antibiotics</h3>
+            <div class="medicine-list">
+                <div class="medicine-item">
+                    <div>
+                        <b>Amount:</b> <input type="number" max="6" min="1" value="1">
+                        <button onclick="addToCart('Antibiotics-Medicine', this.previousElementSibling.value, 15)">Add
+                            to Cart</button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+
+        <div class="section">
+            <h3>Antidepressants </h3>
+            <div class="medicine-list">
+                <div class="medicine-item">
+                    <div>
+                        <b>Amount:</b> <input type="number" max="6" min="1" value="1">
+                        <button
+                            onclick="addToCart('Antidepressants-Medicine', this.previousElementSibling.value, 15)">Add
+                            to Cart</button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+
+        <div class="section">
+            <h3>Antihistamines </h3>
+            <div class="medicine-list">
+                <div class="medicine-item">
+
+                    <div>
+                        <b>Amount:</b> <input type="number" max="6" min="1" value="1">
+                        <button
+                            onclick="addToCart('Antihistamines-Medicine', this.previousElementSibling.value, 15)">Add to
+                            Cart</button>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+
+
+        <div class="section">
+            <h3>Antihypertensives </h3>
+            <div class="medicine-list">
+                <div class="medicine-item">
+                    <div>
+                        <b>Amount:</b> <input type="number" max="6" min="1" value="1">
+                        <button
+                            onclick="addToCart('Antihypertensives-medicine', this.previousElementSibling.value, 15)">Add
+                            to Cart</button>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+
+        
+        <div class="favourites-section">
+            <button>Add to Favourites</button>
+            <button>Apply Favourites</button>
+        </div>
+
+       
+        <div class="cart-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Medicine Name</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+               
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2" class="total-price">Total Price: $<span id="total-price">0.00</span></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <br>
+        <br>
+        <br>
+
+
+
+
+        <div class="section">
+            <h3>Personal Details</h3>
+            <table class="details-form">
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" id="name" required></td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td><input type="email" id="email" required></td>
+                </tr>
+                <tr>
+                    <td>Phone:</td>
+                    <td><input type="tel" id="phone" required></td>
+                </tr>
+            </table>
+        </div>
+
+    
+        <div class="section">
+            <h3>Delivery Details</h3>
+            <table class="details-form">
+                <tr>
+                    <td>Address:</td>
+                    <td><input type="text" id="address" required></td>
+                </tr>
+                <tr>
+                    <td>City:</td>
+                    <td><input type="text" id="city" required></td>
+                </tr>
+                <tr>
+                    <td>Postal Code:</td>
+                    <td><input type="text" id="postal-code" required></td>
+                </tr>
+            </table>
+        </div>
+
+  
+        <div class="section">
+            <h3>Payment Information</h3>
+            <table class="details-form">
+                <tr>
+                    <td>Card Number:</td>
+                    <td><input type="number" id="card-number" required></td>
+                </tr>
+                <tr>
+                    <td>Expiry Date:</td>
+                    <td><input type="text" id="expiry-date" required> CVV: <input type="number" id="cvv" required></td>
+                </tr>
+            </table>
+        </div>
+
+
+
+
+        <div class="pay-button">
+            <button onclick="showConfirmation()">Pay</button>
+        </div>
+
+
+
+        <div class="confirmation-message" id="confirmation-message">
+            <p>Thank you for your purchase!</p>
+            <p>Your order will be delivered by: <span id="delivery-date"></span></p>
+        </div>
+    </div>
+
+    <br>
+
+
+    <footer>
+        <p>white house Rd,southall. | [ Contact-Info:: +449873829372839]</p>
+        <p>&copy; 2024 Hope Heaven Hospital. All rights reserved.</p>
+    </footer>
+
+
+    <script src="con_order.js"></script>
+    <script src="medi.js">
+    </script>
+
+</body>
+
+</html>

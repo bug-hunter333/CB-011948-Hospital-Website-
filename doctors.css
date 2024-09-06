@@ -1,0 +1,240 @@
+/* Importing Roboto font */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+/* Root variables for color schemes */
+:root {
+  --primary-color: #28bf96;
+  --primary-color-dark: #209677;
+  --text-dark: #111827;
+  --text-light: #6b7280;
+  --white: #ffffff;
+}
+
+/* box-sizing */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Button styling */
+.btn {
+  padding: 1rem 2rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--white);
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--primary-color-dark);
+}
+
+/* Body styling */
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Container styling */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navigation bar styling */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #004d99;
+  padding: 10px 20px;
+}
+
+.nav__logo {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav__links {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav__links .link {
+  margin-right: 20px;
+}
+
+.nav__links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.nav__links .btn {
+  background-color: #ff6600;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.nav__links .btn:hover {
+  background-color: #e65c00;
+}
+
+/* Content container */
+.container {
+  width: 80%;
+  margin: 20px auto;
+}
+
+/* Introduction section */
+.intro {
+  text-align: center;
+  margin-bottom: 40px;
+  font-style: oblique;
+}
+
+/* Doctors section styling */
+.doctors-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.doctor {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+}
+
+.doctor img {
+  max-width: 100%;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.doctor h3 {
+  margin: 10px 0 5px;
+}
+
+.doctor p {
+  color: #555;
+}
+
+/* Footer styling */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+footer .contact-info {
+  margin-bottom: 10px;
+}
+
+footer .social-links {
+  margin: 10px 0;
+}
+
+footer .social-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer .social-links a:hover {
+  text-decoration: underline;
+}
+
+footer .copyright {
+  font-size: 12px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .container {
+    width: 90%;
+  }
+
+  .nav__links {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav__logo {
+    margin-bottom: 10px;
+  }
+
+  .nav__links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .container {
+    width: 95%;
+  }
+
+  .doctor {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    padding: 1.5rem 1rem;
+  }
+
+  .nav__logo {
+    font-size: 1.25rem;
+  }
+
+  .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+  }
+
+  .doctor img {
+    height: 120px;
+    width: 120px;
+  }
+
+  footer {
+    padding: 15px;
+  }
+
+  footer p {
+    font-size: 12px;
+  }
+}

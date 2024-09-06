@@ -1,0 +1,185 @@
+/* Basic reset and body styling */
+body,
+h1,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Navigation bar styling */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #004d99;
+  padding: 10px 20px;
+}
+
+.nav__logo {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav__links {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav__links .link {
+  margin-right: 20px;
+}
+
+.nav__links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.nav__links .btn {
+  background-color: #ff6600;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.nav__links .btn:hover {
+  background-color: #e65c00;
+}
+
+/* Responsive navigation for mobile */
+@media (max-width: 768px) {
+  .nav__links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav__links .link {
+    margin: 10px 0;
+  }
+
+  .nav__logo {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+}
+
+/* Hero section */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.hero-section img {
+  width: 100%;
+  height: auto;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 2rem;
+}
+
+/* Introduction section */
+.introduction {
+  padding: 20px;
+  text-align: center;
+}
+
+.introduction h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.introduction p {
+  font-size: 1rem;
+}
+
+/* Sub-sections */
+.sub-section {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.sub-section-text h1 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.sub-section-text p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.sub-section-image {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+.sub-section img {
+  width: 100%;
+  height: auto;
+}
+
+/* Additional info and numbered list */
+.bullet-points,
+.numbered-list {
+  padding: 20px;
+  list-style-position: inside;
+}
+
+.bullet-points li,
+.numbered-list li {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+/* Footer styling */
+footer {
+  background-color: #004d99;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px 0;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+/* Responsive text adjustments */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .introduction h1,
+  .sub-section-text h1 {
+    font-size: 1.25rem;
+  }
+
+  .introduction p,
+  .sub-section-text p,
+  .bullet-points li,
+  .numbered-list li {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Registration Form</title>
+    <link rel="stylesheet" href="patient.css">
+</head>
+
+<body>
+    
+    <nav>
+        <div class="nav__logo">Hope Haven Hospital</div>
+        <ul class="nav__links">
+            <li class="link"><a href="./index.html">Home</a></li>
+            <li class="link"><a href="./about.html">About Us</a></li>
+            <li class="link"><a href="./services.html">Services</a></li>
+            <li class="link"><a href="./doctors.html">Doctors</a></li>
+            <li class="link"><a href="./consultingForm.html">Consulting Reservation</a></li>
+            <li class="link"><a href="./pharmacy.html">Pharmacy</a></li>
+        </ul>
+    </nav>
+
+    
+    <div class="container">
+        <h2>Patient Registration Form</h2>
+        <form id="patientForm">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter full name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter email" required>
+
+            <label for="contact">Contact Number:</label>
+            <input type="tel" id="contact" name="contact" placeholder="Enter contact number" required
+                pattern="[0-9]{10}">
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label>Gender:</label>
+            <div class="gender">
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Male</label>
+
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="female">Female</label>
+
+                <input type="radio" id="other" name="gender" value="other" required>
+                <label for="other">Other</label>
+            </div>
+
+            <button type="submit">Register</button>
+        </form>
+        <p id="message"></p>
+    </div>
+
+    <script src="patient.js"></script>
+</body>
+
+</html>

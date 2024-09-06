@@ -1,0 +1,298 @@
+/* Importing Roboto font */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+/* Root variables for color schemes */
+:root {
+  --primary-color: #28bf96;
+  --primary-color-dark: #209677;
+  --text-dark: #111827;
+  --text-light: #6b7280;
+  --white: #ffffff;
+}
+
+/*  box-sizing */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Button styling */
+.btn {
+  padding: 1rem 2rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--white);
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--primary-color-dark);
+}
+
+/* Body styling */
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Container styling */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navigation bar styling */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #004d99;
+  padding: 10px 20px;
+}
+
+.nav__logo {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav__links {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav__links .link {
+  margin-right: 20px;
+}
+
+.nav__links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.nav__links .btn {
+  background-color: #ff6600;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.nav__links .btn:hover {
+  background-color: #e65c00;
+}
+
+/* Header Container */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.hospital-logo {
+  width: 150px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  margin: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Main Content */
+main {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+/* Pharmacy Page Styling */
+.pharmacy-page {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.pharmacy-page h2,
+.pharmacy-page h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.pharmacy-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.pharmacy-form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.pharmacy-form input,
+.pharmacy-form select,
+.pharmacy-form textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+}
+
+/* Button Styling */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+footer .contact-info {
+  margin-bottom: 10px;
+}
+
+footer .social-links {
+  margin: 10px 0;
+}
+
+footer .social-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer .social-links a:hover {
+  text-decoration: underline;
+}
+
+footer .copyright {
+  font-size: 12px;
+}
+
+/* Responsive Design */
+
+/* Tablet and Below */
+@media (max-width: 1024px) {
+  .container {
+    width: 90%;
+  }
+
+  .nav__links,
+  .nav-links {
+    gap: 1.5rem;
+  }
+
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-container .hospital-logo {
+    margin-bottom: 10px;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav__logo,
+  .header-container .hospital-logo {
+    font-size: 1.25rem;
+  }
+
+  .nav__links,
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .container {
+    width: 95%;
+  }
+
+  .pharmacy-page {
+    padding: 15px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+  nav {
+    padding: 1.5rem 1rem;
+  }
+
+  .nav__logo {
+    font-size: 1.25rem;
+  }
+
+  .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+  }
+
+  .pharmacy-page h2,
+  .pharmacy-page h3 {
+    font-size: 1.25em;
+  }
+
+  footer {
+    padding: 15px;
+  }
+
+  footer p {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="consulting.css" />
+    <title> Hope Haven Hospital</title>
+    <nav>
+        <div class="nav__logo">Hope Haven Hospital</div>
+        <ul class="nav__links">
+            <li class="link"><a href="./index.html">Home</a></li>
+            <li class="link"><a href="./About.html">About Us</a></li>
+            <li class="link"><a href="./services.html">Services</a></li>
+            <li class="link"><a href="./doctors.html">Doctors</a></li>
+            <li class="link"><a href="./consultingForm.html">Consulting Reservation</a></li>
+            <li class="link"><a href="./pharmacy.html">Pharmacy</a></li>
+        </ul>
+    </nav>
+    </ul>
+</head>
+
+<body>
+
+    <main>
+        <section class="consulting-reservation">
+            <h2>Reserve a Consultation</h2>
+            <form class="reservation-form">
+                <label for="patient-name">Patient Name:</label>
+                <input type="text" id="patient-name" name="patient-name" required>
+
+                <label for="contact-info">Contact Information:</label>
+                <input type="text" id="contact-info" name="contact-info" required>
+
+                <label for="preferred-doctor">Preferred Doctor:</label>
+                <select id="preferred-doctor" name="preferred-doctor">
+                    <option value="doctor1">Dr. Sarah Rothenberg</option>
+                    <option value="doctor2">Dr. Noah</option>
+                    <option value="doctor3">Dr. Emily Johnson</option>
+                    <option value="doctor3">Dr. Michael Brown</option>
+                    <option value="doctor3">Dr. Davis</option>
+
+
+                </select>
+
+                <label for="preferred-date">Preferred Date and Time:</label>
+                <input type="date" id="preferred-date" name="preferred-date" required>
+                <input type="time" id="preferred-time" name="preferred-time" required>
+
+                <label for="reason-consultation">Reason for Consultation:</label>
+                <input type="text" id="reason-consultation" name="reason-consultation">
+
+                <label for="additional-notes">Additional Notes:</label>
+                <textarea id="additional-notes" name="additional-notes" rows="4"></textarea>
+
+                <div class="form-buttons">
+                    <button type="submit">Book Appointment</button>
+                    <button type="reset">Clear Form</button>
+                </div>
+            </form>
+
+            <div class="contact-info">
+                <p>Contact us at:</p>
+                <p>Phone: [011-5768543789</p>
+                <p>Email: Havenshospitals@yahoo.com</p>
+            </div>
+        </section>
+    </main>
+
+
+
+    <footer>
+        <p>white house Rd,southall. | [ Contact-Info:: +449873829372839]</p>
+        <p>&copy; 2024 Hope Heaven Hospital. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
